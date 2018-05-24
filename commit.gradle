@@ -1,0 +1,21 @@
+task commit (dependsOn: add){
+    doLast {
+        def des = "描述信息";
+        println(des);
+
+//        "git commit -m ${des}".execute();
+    }
+}
+task add{
+    doLast{
+        println("add");
+//        "git add .".execute();
+    }
+}
+task push(dependsOn: commit){
+    doLast{
+        println("push");
+//        "git push -u origin master ".execute();
+
+    }
+}
